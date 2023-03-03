@@ -5,11 +5,11 @@ import requests
 import re
 
 # replace AIRTABLE_API_KEY with access token
-api_key = "AIRTABLE_API_KEY"
+api_key = "patbZGTBTOLdG363Z.933c2984692a078d881a04b21726b5823e48a86b9f5d882fd56708acea2e50d3"
 
 # import table and view records
 # replace BASE_ID and TABLE_ID with base ID and table ID
-table = Table(api_key, 'BASE_ID', 'TABLE_ID')
+table = Table(api_key, 'app8QwIyfrBK17Fjo', 'tblGgLV5tEeU8hMDB')
 table.all()
 
 # get the html content of link in each record
@@ -57,7 +57,7 @@ def doc(url):
               groupNum = groupNum + 1
               return matches2.group(groupNum)
 
-			elif matches3:
+      elif matches3:
           for groupNum in range(0, len(matches3.groups())):
               groupNum = groupNum + 1
               return matches3.group(groupNum)
@@ -81,7 +81,7 @@ def doc(url):
           for groupNum in range(0, len(matches7.groups())):
               groupNum = groupNum + 1
               return matches7.group(groupNum)			
-			else:
+      else:
           return "<subtitle>"
 
   else:
